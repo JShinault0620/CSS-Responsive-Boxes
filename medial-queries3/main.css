@@ -1,3 +1,74 @@
 body {
   background: peachpuff;
 }
+
+.container * {
+  border: 1px solid black;
+  text-align: center;
+  box-shadow: 1px 1px 2px black;
+}
+
+.container > * {
+  margin: 1em;
+}
+
+.container {
+  display: flex;
+  min-height: 95vh;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header {
+  min-width: 95vw;
+  height: 20vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: 95vw;
+  min-height: 70vh;
+}
+
+main > * {
+  margin: 0.5em;
+}
+
+footer {
+  min-height: 25vh;
+}
+
+.nested {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nested > * {
+  width: 25%;
+  min-height: 20vh;
+  margin: 0.5em;
+}
+
+@media (min-width: 700px) {
+  main {
+    flex-direction: row;
+    max-width: 95vw;
+    max-height: 60vh;
+  }
+  .nested {
+    width: 65vw;
+    align-items: center;
+  }
+  .nested > * {
+    min-height: 30vh;
+    width: 25%;
+  }
+
+  footer {
+    width: 30vw;
+    min-height: 60vh;
+  }
+}
